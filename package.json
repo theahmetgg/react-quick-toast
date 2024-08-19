@@ -1,0 +1,19 @@
+{
+  "name": "react-quick-toast",
+  "version": "0.0.1",
+  "description": "React Quick Toast is a simple and customizable toast notification component for React applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theahmetgg/react-quick-toast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theahmetgg/react-quick-toast/issues"
+  },
+  "homepage": "https://github.com/theahmetgg/react-quick-toast#readme"
+}
