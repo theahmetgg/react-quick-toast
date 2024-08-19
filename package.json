@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/theahmetgg/react-quick-toast/issues"
   },
-  "homepage": "https://github.com/theahmetgg/react-quick-toast#readme"
+  "homepage": "https://github.com/theahmetgg/react-quick-toast#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  }
 }
