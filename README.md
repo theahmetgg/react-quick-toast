@@ -2,8 +2,7 @@
 
 React Quick Toast is a simple and customizable toast notification component for React applications.
 
-![download](https://github.com/user-attachments/assets/242e4f66-e995-4cfb-921f-b16aaa68aade)
-
+![Adsız tasarım](https://github.com/user-attachments/assets/8d25b34b-8e7e-4544-97ff-dcc7a7689843)
 
 
 ## Installation
