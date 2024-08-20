@@ -1,22 +1,33 @@
 {
   "dependencies": {
-    "classname": "^0.0.0",
-    "classnames": "^2.5.1",
-    "prop-types": "^15.8.1",
     "react-icons": "^5.3.0",
+    "rollup": "^4.21.0",
     "uuid": "^10.0.0"
   },
   "name": "react-quick-toast",
   "description": "React Quick Toast is a simple and customizable toast notification component for React applications.",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theahmetgg/react-quick-toast.git"
+    "url": "https://github.com/theahmetgg/react-quick-toast.git"
   },
+  "keywords": [
+    "react",
+    "react-quick-toast",
+    "notification",
+    "toast",
+    "quick",
+    "react-component",
+    "push",
+    "alert"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -24,8 +35,15 @@
   },
   "homepage": "https://github.com/theahmetgg/react-quick-toast#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.3",
     "react": "^18.3.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.6.3",
     "typescript": "^5.5.4"
   }
