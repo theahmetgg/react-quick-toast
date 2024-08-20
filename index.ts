@@ -1,2 +1,2 @@
-import useNotification from "./hooks/use-notification.jsx";
+import useNotification from "./src/hooks/useNotification";
 export default useNotification;
