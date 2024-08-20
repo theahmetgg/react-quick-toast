@@ -7,7 +7,7 @@ import {
   AiOutlineInfoCircle,
   AiOutlineWarning,
 } from "react-icons/ai";
-import "./notification.css";
+import "./Notification.css";
 
 // Define types for props
 type NotificationType = "success" | "info" | "warning" | "error";

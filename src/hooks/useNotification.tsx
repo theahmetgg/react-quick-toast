@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import Notification from "../components/notification";
+import Notification from "../components/Notification";
 import { v4 as uuidv4 } from "uuid";
 import {
   NotificationProps,
@@ -10,16 +10,16 @@ import {
 const useNotification = (
   position: PositionType = "bottom-right"
 ): UseNotificationReturn => {
-  const [notifications, setNotifications] = useState<
-    (NotificationProps & { id: string })[]
-  >([]);
+  const [notifications, setNotifications] = useState<NotificationProps[]>([]);
 
   const triggerNotification = useCallback(
-    (notificationProps: NotificationProps) => {
+    (notificationProps: Omit<NotificationProps, "id">) => {
       const toastId = uuidv4();
+      const notificationWithId = { id: toastId, ...notificationProps };
+
       setNotifications((prevNotifications) => [
         ...prevNotifications,
-        { id: toastId, ...notificationProps },
+        notificationWithId,
       ]);
 
       setTimeout(() => {
@@ -31,23 +31,19 @@ const useNotification = (
     []
   );
 
-  const handleNotificationClose = (index: number) => {
-    setNotifications((prevNotifications) => {
-      const updatedNotifications = [...prevNotifications];
-      updatedNotifications.splice(index, 1);
-      return updatedNotifications;
-    });
+  const handleNotificationClose = (id: string) => {
+    setNotifications((prevNotifications) =>
+      prevNotifications.filter((n) => n.id !== id)
+    );
   };
 
   const NotificationComponent = (
-    <div
-      className={`notification-container ${position} ${position.split("-")[0]}`}
-    >
-      {notifications.map((notification, index) => (
+    <div className={`notification-container ${position}`}>
+      {notifications.map((notification) => (
         <Notification
           key={notification.id}
           {...notification}
-          onClose={() => handleNotificationClose(index)}
+          onClose={() => handleNotificationClose(notification.id)}
         />
       ))}
     </div>

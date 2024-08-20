@@ -1,45 +1,35 @@
+// types.ts
+export type NotificationType = "success" | "info" | "warning" | "error";
+
+export type AnimationType =
+  | "fadeIn"
+  | "popup"
+  | "slideIn"
+  | "shake"
+  | "bounce"
+  | "pulse"
+  | "rotate"
+  | "flip"
+  | "zoom";
+
 export interface NotificationProps {
-  type: "success" | "info" | "warning" | "error";
+  type: NotificationType;
   message: string;
   onClose: () => void;
-  animation?:
-    | "fade"
-    | "pop"
-    | "slide"
-    | "shake"
-    | "bounce"
-    | "pulse"
-    | "rotate"
-    | "flip"
-    | "zoom";
+  animation?: AnimationType;
+  duration: number;
+  id: string;
 }
 
-// Define the allowed positions
 export type PositionType =
   | "bottom-left"
   | "bottom-right"
   | "top-left"
   | "top-right";
 
-// Define the properties of a notification
-export interface NotificationProps {
-  type: "success" | "info" | "warning" | "error";
-  message: string;
-  duration: number;
-  animation?:
-    | "fade"
-    | "pop"
-    | "slide"
-    | "shake"
-    | "bounce"
-    | "pulse"
-    | "rotate"
-    | "flip"
-    | "zoom";
-}
-
-// Define the return type of the hook
 export interface UseNotificationReturn {
   NotificationComponent: JSX.Element;
-  triggerNotification: (notificationProps: NotificationProps) => void;
+  triggerNotification: (
+    notificationProps: Omit<NotificationProps, "id">
+  ) => void;
 }
