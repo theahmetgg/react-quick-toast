@@ -4,9 +4,9 @@
     "rollup": "^4.21.0",
     "uuid": "^10.0.0"
   },
-  "name": "react-quick-toast",
+  "name": "@theahmetgg/react-quick-toast",
   "description": "React Quick Toast is a simple and customizable toast notification component for React applications.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -47,5 +47,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.3",
     "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
